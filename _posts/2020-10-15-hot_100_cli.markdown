@@ -1,0 +1,16 @@
+---
+layout: post
+title:      "Hot 100 cli "
+date:       2020-10-15 21:12:14 +0000
+permalink:  hot_100_cli
+---
+
+
+      So, the hardest part of this project process was definitely deciding where to start and choosing a domain. Although, something did eventually come to me. 
+			What came to me -> It seems like every week there is a new song or artist hashtag trending on twitter and people trying to force a song on to the top of the Billboard chart by getting their peers to start streaming a particular song. People do not seem to care much about complete albums anymore, it is more about the singles and where they ended up on the Billboard chart. I am a big fan of music and like to keep up with new music, so I decided to create a command line app that scrapes the billboard chart and will give you the list of the current Hot 100 songs in the country. 
+			After I used bundler to create my gem, I had to figure out how and where I was going to setup the files the app was going to use to run. Luckily, Flatiron provides a good demo video presentation where Avi demonstrates creating a cli gem called Student Scraper. Coming into this final project, I did not fully comprehend what an executable file did nor did I fully understand what the bin file was for. However, I was able to setup my executable by following along on the Student Scraper video presentation. So, I got my cli to start by running bin/hot-100, and then it was on to the actual code for my application.
+			I created a cli class to use as a cli controller, a scraper class responsible for scraping the data from the Billboard website, and a song class. The cli controller has methods such as #call, #start, and #list_songs, which are responsible for using the other classes to make the app run the way I intended it to. The scraper class scrapes the data from the Billboard website and uses that data to create song objects. The song class has an @@all array and I created a custom constructor so that instances of a song could be created from the Billboard website data. The trickiest part to all these classes, was definitely the scraping of the billboard class. I took me a couple of tries to find the right data. The first time I tried scraping the site for the individual songs on the chart, I got back a collection of all the songs. This told me I was scraping the wrong div and that I needed to go one level deeper. Also, I had to create an empty hash to store the song data I was going to use for each individual instance of a song. 
+			Overall, this project was not too challenging because Flatiron gives you plenty of resources and links to help with any problems that may arise. I really enjoyed learning the scraping process and using that scraped data to create objects that map that data. It is pretty cool to use my app on a different week and see that it still works and the songs on the chart have been updated.
+			
+			
+
